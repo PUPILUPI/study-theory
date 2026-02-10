@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <!-- Тень для квадрата -->
+        <filter id="shadow-bg" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="3" stdDeviation="4"
+                          flood-color="#000" flood-opacity="0.25"/>
+        </filter>
+
+        <!-- Тень для галочки -->
+        <filter id="shadow-check" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="2" stdDeviation="2"
+                          flood-color="#000" flood-opacity="0.35"/>
+        </filter>
+    </defs>
+
+    <!-- Зеленый квадрат с объёмом -->
+    <rect x="0" y="0" width="100" height="100" rx="8"
+          fill="#4CAF50" filter="url(#shadow-bg)"/>
+
+    <!-- Галочка сдвинута вверх -->
+    <g filter="url(#shadow-check)" fill="none" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 50 L45 75 L80 25"/>
+    </g>
+</svg>

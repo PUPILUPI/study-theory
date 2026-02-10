@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <!-- Тень для квадрата -->
+        <filter id="shadow-bg" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="3" stdDeviation="4"
+                          flood-color="#000" flood-opacity="0.25"/>
+        </filter>
+
+        <!-- Тень для креста -->
+        <filter id="shadow-cross" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="2" stdDeviation="2"
+                          flood-color="#000" flood-opacity="0.35"/>
+        </filter>
+    </defs>
+
+    <!-- Красный квадрат с объёмом -->
+    <rect x="0" y="0" width="100" height="100" rx="8"
+          fill="#D32F2F" filter="url(#shadow-bg)"/>
+
+    <!-- Диагональный белый крест с лёгкой тенью -->
+    <g filter="url(#shadow-cross)">
+        <rect x="45" y="10" width="10" height="80" fill="white"
+              transform="rotate(45 50 50)"/>
+        <rect x="45" y="10" width="10" height="80" fill="white"
+              transform="rotate(-45 50 50)"/>
+    </g>
+</svg>
